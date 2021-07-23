@@ -23,6 +23,7 @@ namespace ScpDoorDestroyer
 
         public override void OnEnabled()
         {
+            if(!Config.IsEnabled) return;
             EventHandler = new EventHandlers(this);
 
             Player.InteractingDoor += EventHandler.InteractingDoors;
